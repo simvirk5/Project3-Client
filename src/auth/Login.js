@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import axios from 'axios';
+import { SERVER_URL } from '../auth/constants';
+
 
 class Login extends Component {
 	constructor(props) {

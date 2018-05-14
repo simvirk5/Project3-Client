@@ -10,6 +10,7 @@ import Nav from './layout/Nav';
 import Profile from './Profile';
 import Signup from './auth/Signup';
 import SearchMentor from './SearchMentor';
+import { SERVER_URL } from './constants';
 
 
 class App extends Component {

@@ -1,0 +1,1 @@
+module.exports.SERVER_URL = "https://mentrme.herokuapp.com"
