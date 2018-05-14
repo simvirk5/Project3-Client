@@ -1,0 +1,180 @@
+html {
+  margin: 0 auto !important;
+  width: 100% !important;
+}
+
+nav {
+  background-color: #49bbc1;
+  padding: 0 4vw;
+}
+
+nav a {
+  margin: 20px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  font-family: 'Ubuntu', sans-serif;
+  text-align: right;
+}
+
+nav a:hover {
+  color: black;
+}
+.button a:hover {
+  color: 'yellow';
+  box-shadow: 15px;
+
+}
+.footer {
+  background-color: #49bbc1;
+  width: 100%;
+  height: 25px;
+  position: fixed;
+  bottom: 0;
+}
+.footer-text {
+  color: white;
+  font-size: 15px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.App {
+  text-align: center;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+.home {
+  background-image: url("../src/images/meeting.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  width: 100%!important;
+    
+}
+.home  {
+
+}
+
+.App-logo {
+  height: 100%;
+  width: 100%;
+}
+
+.App-header {
+  background-color: #222;
+  margin-top: 350px;
+  height: 150px;
+  padding: 20px;
+  color: white;
+  font-family: 'Abel', sans-serif;
+}
+
+.App-title {
+  font-size: 2em;
+  font-family: 'Abel', sans-serif;
+  font-size: 50px;
+}
+
+.App-intro {
+  font-size: large;
+  font-family: 'Ubuntu', sans-serif;
+}
+.hometext {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+}
+.loginheader {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: bold;
+}
+.resultkey {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+
+
+}
+.searchHeader {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+
+}
+.searchmentor {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+
+}
+.button {
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-family: 'Abril Fatface';
+  font-size: 20px;
+  font-weight: bold;
+}
+.signupheader {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+
+}
+label {
+   font-family: 'Open Sans Condensed', sans-serif;
+}
+.mentor-form {
+  text-align: left;
+  left: -30px;
+  color: white;
+  font-family: 'Ubuntu', sans-serif;
+}
+.list-container {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  text-align: center!important;
+}
+
+.new-display {
+  background-color: grey;
+  height: 100vh;
+  width: 100%;
+  color: white;
+  padding: 0px 20px;
+}
+.collapsible-header {
+  background-color: #222222;
+}
+.collapsible-body {
+  background-color: #479a9e5e
+}
+.mentor-form h4 {
+  color: black;
+}
+[type="checkbox"].filled-in:checked+label:after {
+  background-color: #49bbc1;
+  border: 2px solid black;
+}
+[type="checkbox"]+label {
+  color: black;
+  font-family: 'Ubuntu', sans-serif;
+}
+.button, .input {
+  color: white;
+  background-color: #49bbc1;
+}
+.homeSignin {
+  margin-top: 400px;
+
+
+}
+.home-intro {
+  font-size: 20px;
+  font-family: 'Ubuntu', sans-serif;
+  height: 200px;
+  text-align: center;
+  padding: 30px;
+
+}
