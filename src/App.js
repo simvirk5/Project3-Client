@@ -32,7 +32,7 @@ class App extends Component {
     if(token){
       console.log('token found in LS', token);
       // There is a token in local storage. Try to validate it 
-      axios.post('/auth/me/from/token', {
+      axios.post(SERVER_URL + '/auth/me/from/token', {
         headers: { 'Authorization': `Bearer ${token}` }
       })
       .then(response => {
