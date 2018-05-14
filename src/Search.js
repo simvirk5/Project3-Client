@@ -1,6 +1,7 @@
-
 import React, { Component } from 'react';
 import axios from 'axios';
+import { SERVER_URL } from '../constants';
+
 
 class Search extends Component {
 	constructor(props) {
@@ -24,7 +25,7 @@ handleZipChange = (e) => {
 handleSearch = (e) => {
 	e.preventDefault();
 	console.log("Zip was submitted!", this.state);
-	axios.post('/getusersnearby', {zipcode: this.state.zipcode})
+	axios.post(SERVER_URL + '/getusersnearby', {zipcode: this.state.zipcode})
 	.then(res => {
 		const results = res.data;
 		console.log('this is res data: ', res.data)

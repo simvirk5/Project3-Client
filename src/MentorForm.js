@@ -3,10 +3,11 @@ import axios from 'axios';
 import Select from 'react-select';
 import 'react-select/dist/react-select.css';
 import Search from './Search';
-import { Collapsible, CollapsibleItem, Input } from 'react-materialize'
+import { Collapsible, CollapsibleItem, Input } from 'react-materialize';
+import { SERVER_URL } from '../constants';
+
 
 const medicine =['Dentistry', 'Gyno', 'Pediatrics']
-
 const arts = ['Photography', 'Animation', 'Sculpture', 'Illustration', 'Theatre']
 const law = ['Attorney', 'Prosecutor', 'Public Defender', 'Private Practice']
 const tech = ['Web Developer', 'Data Scientist', 'UX Designer', 'Project Manager']
@@ -48,7 +49,7 @@ class MentorForm extends Component {
 		console.log("Mentor form created!", this.state);
 		console.log('user is', this.props.user);
 		// this.state.field.push(this.state.field);
-		axios.post('/mentor', {
+		axios.post(SERVER_URL + '/mentor', {
 			userId: this.props.user.id, 
 			// field: ['something here'],
 			field: this.state.field,

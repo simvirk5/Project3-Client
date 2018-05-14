@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Search from './Search';
+import { SERVER_URL } from '../constants';
+
 
 class StudentForm extends Component {
 	constructor(props) {
@@ -22,7 +24,7 @@ class StudentForm extends Component {
 	handleSubmit = (e) => {
 		e.preventDefault();
 		console.log("Student form created!");
-		axios.post('/student', {
+		axios.post(SERVER_URL + '/student', {
 			userId: this.props.user_id, 
 			experience: this.state.experience,
 			description: this.state.description

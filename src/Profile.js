@@ -3,7 +3,7 @@ import StudentForm from './StudentForm';
 import MentorForm from './MentorForm';
 import { Redirect } from 'react-router-dom';
 import axios from 'axios';
-
+import { SERVER_URL } from '../constants';
 import { Link } from 'react-router-dom';
 
 
@@ -21,7 +21,7 @@ class Profile extends Component {
 componentDidMount () {
 if (this.props.user) {
   if (this.props.user.mentor) {
-  axios.get('/mentor/' + this.props.user._id)
+  axios.get(SERVER_URL + '/mentor/' + this.props.user._id)
 			.then(results => {
 				this.setState ({
 					field: results.data.field,
@@ -35,7 +35,7 @@ if (this.props.user) {
   
 
   else {
-	axios.get('/student/' + this.props.user.id)
+	axios.get(SERVER_URL + '/student/' + this.props.user.id)
 			.then(results => {
 				this.setState ({
 					field: results.data.field,
