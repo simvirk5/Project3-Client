@@ -4,7 +4,7 @@ import Select from 'react-select';
 import 'react-select/dist/react-select.css';
 import Search from './Search';
 import { Collapsible, CollapsibleItem, Input } from 'react-materialize';
-import { SERVER_URL } from '../constants';
+import { SERVER_URL } from './constants';
 
 
 const medicine =['Dentistry', 'Gyno', 'Pediatrics']

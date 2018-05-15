@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Search from './Search';
-import { SERVER_URL } from '../constants';
+import { SERVER_URL } from './constants';
 
 
 class StudentForm extends Component {

@@ -25,6 +25,7 @@ class Login extends Component {
 	handleSubmit = (e) => {
 		e.preventDefault();
 		console.log("form was submitted!", this.state);
+		console.log('axios ', SERVER_URL)
 		axios.post(SERVER_URL + '/auth/login', this.state)
 		.then(result => {
 			console.log('SUCCESS!', result);
