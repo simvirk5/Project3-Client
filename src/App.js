@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import axios from 'axios';
-// import logo from './logo.svg';
 import './App.css';
 import Footer from './layout/Footer';
 import Home from './Home';
@@ -10,7 +9,6 @@ import Nav from './layout/Nav';
 import Profile from './Profile';
 import Signup from './auth/Signup';
 import SearchMentor from './SearchMentor';
-import Contact from './Contact';
 import { SERVER_URL } from './constants';
 
 
@@ -81,9 +79,6 @@ class App extends Component {
             } />
             <Route path = "/search" component = { 
               () => (<SearchMentor user={this.state.user} />)
-            } />
-            <Route path = "/contact" component = { 
-              () => (<Contact user={this.state.user}  />)
             } />
           </div>
         </Router>

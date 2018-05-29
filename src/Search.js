@@ -49,41 +49,6 @@ saveContacts = (e) => {
 
 }
 
-render() {
-        const results = this.state.results.map(person => {
-            if(person && person.name){
-                return (
-                    <div className = "contact" key={person.id}>
-                        <p>Mentor: {person.name}</p>
-                        <p>Contact: {person.email}</p>
-                        <p>Location: {person.zipcode}</p>
-                        <div>
-                            <input onClick = {this.saveContacts} type = "submit" value = "Connect" className = "button" 
-                            data-mentor = {person.name} data-email = {person.email} data-location = {person.zipcode} />
-                        </div>
-                        <hr />
-                    </div>
-                );
-            }
-        });
-
-        return (
-            <div>
-                <form onSubmit = {this.handleSearch}>
-                    <div className="searchform">
-                        <input name = "Zipcode" placeholder = "What is your Zipcode?" value = {this.state.zipcode} 
-                        onChange = {this.handleZipChange} />
-                    </div>
-                    <button className="button" onClick = "search">Search Mentors</button>
-                </form>
-                <hr />
-                <div>
-                    {results}
-                </div>
-            </div>
-    
-    
-        );
 	render() {
 		const results = this.state.results.map(person => {
 			if(person && person.name){
@@ -114,8 +79,6 @@ render() {
 					{results}
 				</div>
 			</div>
-	
-	
 		);
 
     }

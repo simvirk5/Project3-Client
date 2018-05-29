@@ -17,7 +17,7 @@ class Profile extends Component {
 			field: [],
 			experience: ''
 		}
-	};
+	}
 
 	componentDidMount () {
 		if (this.props.user.mentor === true) {
@@ -45,12 +45,6 @@ class Profile extends Component {
 			});
 		}
 	}
-}
-//passing formsubmit as props in mentorform
-
-
-
-
 	
 	render() {
 		if(this.props.user && this.props.user.mentor){
@@ -71,15 +65,13 @@ class Profile extends Component {
 				</div>
 			)
 		} else {
-			 return(
+			return(
            		 <Redirect to = "/" />
-           		 );
+           	);
 		}		
 	}
 
 }
-
-
 
 
 export default Profile;

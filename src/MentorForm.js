@@ -169,12 +169,7 @@ var educationMap = education.map((item,index) =>
 					
 				</div>
 			</div>
-
 		);
-					<h5>Your bio: {newDisplay}</h5>
-			</div>		
-		</div>
-    );
   }
 }
 
