@@ -20,6 +20,7 @@ nav a {
 nav a:hover {
   color: black;
 }
+
 .button a:hover {
   color: 'yellow';
   box-shadow: 15px;
@@ -50,11 +51,8 @@ nav a:hover {
   background-repeat: no-repeat;
   background-size: cover;
   height: 500px;
-  width: 100%!important;
-    
-}
-.home  {
-
+  width: 100%!important;   
+  position: fixed;
 }
 
 .App-logo {
@@ -64,7 +62,7 @@ nav a:hover {
 
 .App-header {
   background-color: #222;
-  margin-top: 350px;
+  margin-top: 380px;
   height: 150px;
   padding: 20px;
   color: white;
@@ -119,6 +117,10 @@ nav a:hover {
 .signupheader {
   font-family: 'Ubuntu', sans-serif;
   font-weight: bold;
+  width: 50%;
+  margin: 0 auto;
+  padding: 30px;
+
 
 }
 label {
@@ -138,18 +140,19 @@ label {
 }
 
 .new-display {
-  background-color: grey;
-  height: 100vh;
-  border: solid 2px #49bbc1;
-  width: 100%;
-  color: white;
+  background-color: white;
+  border: 2px solid #49bbc1;
+  height: 50%vh;
+  color: black;
+  width: 50%;
   padding: 0px 20px;
+  margin-top: 10px;
 }
 .collapsible-header {
   background-color: #222222;
 }
 .collapsible-body {
-  background-color: #479a9e5e
+  background-color: #479a9e5e;
 }
 .mentor-form h4 {
   color: black;
@@ -163,19 +166,81 @@ label {
   font-family: 'Ubuntu', sans-serif;
 }
 .button, .input {
-  color: white;
+  color: black;
   background-color: #49bbc1;
 }
-.homeSignin {
-  margin-top: 400px;
 
+.homesignin{
+  width: 250px;
+  height: auto;
+  padding-top: 200px;
+  margin: 0 auto;
 
 }
+.home-btn {
+  background-color: white!important;
+}
+.home-btn:hover, .home-btn:focus {
+  color: #49bbc1;
+}
+
 .home-intro {
   font-size: 20px;
   font-family: 'Ubuntu', sans-serif;
   height: 200px;
   text-align: center;
   padding: 30px;
+  line-height: 40px;
+}
+.homeintro2 {
+  padding-bottom: 100px;
+}
 
+.space {
+  font-style: italic;
+  font-family: 'Abel', sans-serif;
+  color: #49bbc1;
+  text-shadow:  2px 2px;
+  -webkit-text-stroke: 1px black;
+}
+.mentor {
+   text-shadow: 2px 2px;
+  -webkit-text-stroke: 1px black;
+}
+.loginform, .studentform, .searchform {
+  width: 50%;
+  margin: 0 auto;
+  padding: 10px;
+}
+h4 {
+  text-align: center;
+}
+.signinform {
+  width: 50%!important;
+  margin: 0 auto;
+  padding: 10px;
+}
+.findmentor {
+  padding: 30px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 30px;
+  color: #49bbc1;
+}
+.findmentor a:hover {
+  color: black;
+}
+.studentprofile {
+  font-family: 'Ubuntu', sans-serif;
+}
+.selectedfields, .fields {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 20px;
+  margin-left: -20px;
+  text-align: left;
+  color: #49bbc1;
+
+}
+.fields  {
+  text-decoration: underline;
+  font-weight: bold;
 }

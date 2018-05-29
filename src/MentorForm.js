@@ -3,11 +3,10 @@ import axios from 'axios';
 import Select from 'react-select';
 import 'react-select/dist/react-select.css';
 import Search from './Search';
-import { Collapsible, CollapsibleItem, Input } from 'react-materialize';
+import { Collapsible, CollapsibleItem, Input } from 'react-materialize'
 import { SERVER_URL } from './constants';
 
-
-const medicine =['Dentistry', 'Gyno', 'Pediatrics']
+const medicine =['Dentistry', 'Gynecologist', 'Pediatrics']
 const arts = ['Photography', 'Animation', 'Sculpture', 'Illustration', 'Theatre']
 const law = ['Attorney', 'Prosecutor', 'Public Defender', 'Private Practice']
 const tech = ['Web Developer', 'Data Scientist', 'UX Designer', 'Project Manager']
@@ -24,6 +23,7 @@ class MentorForm extends Component {
 		};
 	}
 	
+  
 	fieldChange = (e) => {
 		const newField = this.state.field
 		let index
@@ -85,7 +85,7 @@ if (this.state.display === true) {
 	var newDisplay = ( 
 		<div>
 			<ul className='browser-default'>
-			<h4>Your fields:{fieldMap} </h4>
+			<h4 className="selectedfields"><span className="fields">Fields Selected: </span> {fieldMap} </h4>
 			</ul>
 			<p>{this.state.experience}</p>
 		</div>
@@ -137,8 +137,8 @@ var educationMap = education.map((item,index) =>
 		return (
 			<div className= "mentor-form row">
 				<form onSubmit = {this.formSubmit}>	
-					<div className="col s6">
 					<h4>Pick your Areas of Expertise</h4>
+					<div className="col s6">
 						<Collapsible accordion name="Field" >
 						  <CollapsibleItem header='Medicine' icon='arrow_drop_down_circle'>
 						  	<ul>{medicineMap}</ul>
@@ -164,14 +164,21 @@ var educationMap = education.map((item,index) =>
 				<div className='new-display col s6'>
 					<h5>Hello again, {this.props.user.name}!</h5>
 					<h5>Your email is {this.props.user.email}</h5>
-					<h5>Your bio: {newDisplay}</h5>
+
+					<h5>{newDisplay}</h5>
 					
 				</div>
 			</div>
 
 		);
+					<h5>Your bio: {newDisplay}</h5>
+			</div>		
+		</div>
+    );
   }
 }
+
+
 
 
 export default MentorForm;

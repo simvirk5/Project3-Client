@@ -14,7 +14,8 @@ class Search extends Component {
 				email: '',
 				zipcode: ''
 			}
-			]
+			],
+            user: this.props.user
 		};
 	}
 
@@ -39,8 +40,50 @@ handleSearch = (e) => {
 		console.log('ERROR', err);
 	});
 }
+saveContacts = (e) => {
+    e.preventDefault();
+    console.log("e.target here", e.target);
+    console.log("state here", this.state);
+    axios.post(SERVER_URL + `/profile/${this.state.user.id}`, {Mentor: e.target.getAttribute('data-mentor'), 
+        Contact: e.target.getAttribute('data-email'), Location: e.target.getAttribute('data-location')})
 
+}
 
+render() {
+        const results = this.state.results.map(person => {
+            if(person && person.name){
+                return (
+                    <div className = "contact" key={person.id}>
+                        <p>Mentor: {person.name}</p>
+                        <p>Contact: {person.email}</p>
+                        <p>Location: {person.zipcode}</p>
+                        <div>
+                            <input onClick = {this.saveContacts} type = "submit" value = "Connect" className = "button" 
+                            data-mentor = {person.name} data-email = {person.email} data-location = {person.zipcode} />
+                        </div>
+                        <hr />
+                    </div>
+                );
+            }
+        });
+
+        return (
+            <div>
+                <form onSubmit = {this.handleSearch}>
+                    <div className="searchform">
+                        <input name = "Zipcode" placeholder = "What is your Zipcode?" value = {this.state.zipcode} 
+                        onChange = {this.handleZipChange} />
+                    </div>
+                    <button className="button" onClick = "search">Search Mentors</button>
+                </form>
+                <hr />
+                <div>
+                    {results}
+                </div>
+            </div>
+    
+    
+        );
 	render() {
 		const results = this.state.results.map(person => {
 			if(person && person.name){
@@ -57,7 +100,6 @@ handleSearch = (e) => {
 				);
 			}
 		});
-
 
 		return (
 			<div>
@@ -76,9 +118,7 @@ handleSearch = (e) => {
 	
 		);
 
-
-	}
+    }
 }
 
 export default Search;
-

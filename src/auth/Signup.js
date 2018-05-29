@@ -72,16 +72,16 @@ class Signup extends Component {
 			<div>
 				<h2 className = "signupheader">Sign up as a new user</h2>
 				<form onSubmit = {this.handleSubmit}>
-					<div>
+					<div className="signinform">
 						<input name = "Name" placeholder = "What is your name?" value = {this.state.name} onChange = {this.handleNameChange} />
 					</div>
-					<div>
+					<div className="signinform">
 						<input name = "Email" placeholder = "What is your email?" value = {this.state.email} onChange = {this.handleEmailChange} />
 					</div>
-					<div>
+					<div className="signinform">
 						<input name = "Password" placeholder = "Type a password" type = "password" value = {this.state.password} onChange = {this.handlePasswordChange} />
 					</div>
-					<div>
+					<div className="signinform">
 						<input name = "ZipCode" placeholder = "What's your zipcode?" value = {this.state.zipcode}
 							onChange = {this.handleZipCodeChange} />
 					</div>
